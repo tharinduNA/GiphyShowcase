@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FreshWorks</string>
+    <string name="title_home">Home</string>
+    <string name="title_fav">Favourites</string>
+    <string name="search_hint">Search</string>
+    <string name="no_results">No Results!!</string>
+    <string name="no_favs">No Favourites!!</string>
+</resources>

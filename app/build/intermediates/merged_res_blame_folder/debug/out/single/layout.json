@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/progress_dialog.xml",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/progress_dialog.xml"
+    },
+    {
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_fav.xml",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/fragment_fav.xml"
+    },
+    {
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_main.xml",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/giphy_item.xml",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/giphy_item.xml"
+    }
+]
