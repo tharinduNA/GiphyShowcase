@@ -4,16 +4,16 @@
         "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/drawable/ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/res/merged/debug/layout_giphy_item.xml.flat",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/giphy_item.xml"
     },
     {
         "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/res/merged/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/res/merged/debug/layout_giphy_item.xml.flat",
-        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/layout/giphy_item.xml"
+        "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/Abeyratne/Documents/RnD/FreshWorks/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",

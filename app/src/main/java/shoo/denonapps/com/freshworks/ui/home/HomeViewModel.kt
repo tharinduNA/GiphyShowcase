@@ -79,7 +79,7 @@ class HomeViewModel @Inject constructor(
     fun arrangeList(favList: List<String>, originalList: ArrayList<GiphyObject>): ArrayList<GiphyObject> {
         originalList.forEachIndexed { index, element ->
             if (favList.contains(element.id)){
-                originalList.set(index, GiphyObject(element.id, element.title, element.isFav.not()))
+                originalList.set(index, GiphyObject(element.id, element.title, true))
             }
         }
         return originalList
