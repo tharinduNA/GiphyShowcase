@@ -6,7 +6,7 @@ import dagger.Subcomponent;
 import dagger.android.AndroidInjector;
 import dagger.multibindings.ClassKey;
 import dagger.multibindings.IntoMap;
-import shoo.denonapps.com.freshworks.ui.base.LoadingFragment;
+import shoo.denonapps.com.freshworks.ui.loading.LoadingFragment;
 
 @Module(subcomponents = FragmentModule_ContributeLoadingFragment.LoadingFragmentSubcomponent.class)
 public abstract class FragmentModule_ContributeLoadingFragment {

@@ -2,7 +2,7 @@ package shoo.denonapps.com.freshworks.di.module
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
-import shoo.denonapps.com.freshworks.ui.base.LoadingFragment
+import shoo.denonapps.com.freshworks.ui.loading.LoadingFragment
 import shoo.denonapps.com.freshworks.ui.favourite.FavouriteFragment
 import shoo.denonapps.com.freshworks.ui.home.HomeFragment
 

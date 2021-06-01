@@ -11,24 +11,23 @@ import shoo.denonapps.com.freshworks.model.Giphy
 import shoo.denonapps.com.freshworks.datasource.GiphyFavDataSource
 import shoo.denonapps.com.freshworks.model.GiphyObject
 import shoo.denonapps.com.freshworks.repository.GiphyRepository
-import shoo.denonapps.com.freshworks.service.Result
+import shoo.denonapps.com.freshworks.utils.Result
 import shoo.denonapps.com.freshworks.utils.events.SingleLiveEvent
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(
-    private val loginRepository: GiphyRepository,
+    private val giphyRepository: GiphyRepository,
     private val giphyFavDataSource: GiphyFavDataSource
 ) : ViewModel() {
 
     val loadingIndicator = SingleLiveEvent<Boolean>()
-    val updateHomeAdapter = SingleLiveEvent<Unit>()
 
     var gifList: MutableLiveData<ArrayList<GiphyObject>> = MutableLiveData()
     var error: MutableLiveData<Exception> = MutableLiveData()
 
     fun fetchTrendingList() {
         viewModelScope.launch {
-            loginRepository.trendingGiphys()
+            giphyRepository.trendingGiphys()
                 .onStart {
                     handleLoadingScreen(true)
                 }
@@ -47,7 +46,7 @@ class HomeViewModel @Inject constructor(
 
     fun fetchSearchList(search: String) {
         viewModelScope.launch {
-            loginRepository.searchedGiphys(search)
+            giphyRepository.searchedGiphys(search)
                 .onStart {
                     handleLoadingScreen(true)
                 }
@@ -64,7 +63,7 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun handleLoadingScreen(show: Boolean) {
+    fun handleLoadingScreen(show: Boolean) {
         loadingIndicator.value = show
     }
 

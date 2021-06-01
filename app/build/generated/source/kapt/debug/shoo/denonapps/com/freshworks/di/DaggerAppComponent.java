@@ -36,7 +36,6 @@ import shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideGiphyRetrofi
 import shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideGsonFactory;
 import shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideRetrofitFactory;
 import shoo.denonapps.com.freshworks.service.GiphyService;
-import shoo.denonapps.com.freshworks.ui.base.LoadingFragment;
 import shoo.denonapps.com.freshworks.ui.base.MainActivity;
 import shoo.denonapps.com.freshworks.ui.favourite.FavouriteFragment;
 import shoo.denonapps.com.freshworks.ui.favourite.FavouriteFragment_MembersInjector;
@@ -46,6 +45,7 @@ import shoo.denonapps.com.freshworks.ui.home.HomeFragment;
 import shoo.denonapps.com.freshworks.ui.home.HomeFragment_MembersInjector;
 import shoo.denonapps.com.freshworks.ui.home.HomeViewModel;
 import shoo.denonapps.com.freshworks.ui.home.HomeViewModel_Factory;
+import shoo.denonapps.com.freshworks.ui.loading.LoadingFragment;
 
 @DaggerGenerated
 @SuppressWarnings({

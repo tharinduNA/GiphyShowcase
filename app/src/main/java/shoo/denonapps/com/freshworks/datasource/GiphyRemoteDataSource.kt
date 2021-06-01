@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 import shoo.denonapps.com.freshworks.model.GiphyObject
 import shoo.denonapps.com.freshworks.repository.GiphyRepository
 import shoo.denonapps.com.freshworks.service.GiphyService
-import shoo.denonapps.com.freshworks.service.Result
+import shoo.denonapps.com.freshworks.utils.Result
 import javax.inject.Inject
 
 class GiphyRemoteDataSource @Inject constructor(

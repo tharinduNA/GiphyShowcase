@@ -14,7 +14,7 @@ import dagger.android.support.DaggerFragment
 import shoo.denonapps.com.freshworks.databinding.FragmentHomeBinding
 import shoo.denonapps.com.freshworks.datasource.GiphyFavDataSource
 import shoo.denonapps.com.freshworks.model.GiphyObject
-import shoo.denonapps.com.freshworks.ui.base.LoadingFragment
+import shoo.denonapps.com.freshworks.ui.loading.LoadingFragment
 import javax.inject.Inject
 
 class HomeFragment : DaggerFragment() {

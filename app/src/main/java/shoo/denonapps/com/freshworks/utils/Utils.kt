@@ -18,7 +18,7 @@ class Utils {
                 .into(this)
         }
 
-        private fun getUri(id: String): String = "https://media.giphy.com/media/$id/giphy.gif"
+        fun getUri(id: String): String = "https://media.giphy.com/media/$id/giphy.gif"
     }
 
 }

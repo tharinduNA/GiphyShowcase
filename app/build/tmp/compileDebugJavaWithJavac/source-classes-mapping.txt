@@ -1,7 +1,8 @@
-shoo/denonapps/com/freshworks/BR.java
- shoo.denonapps.com.freshworks.BR
-shoo/denonapps/com/freshworks/di/module/NetworkModule_ProvideGiphyRetrofitServiceFactory.java
- shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideGiphyRetrofitServiceFactory
+shoo/denonapps/com/freshworks/database/AppDatabase_Impl.java
+ shoo.denonapps.com.freshworks.database.AppDatabase_Impl
+ shoo.denonapps.com.freshworks.database.AppDatabase_Impl$1
+shoo/denonapps/com/freshworks/di/module/DBModule_ProvidesUserDaoFactory.java
+ shoo.denonapps.com.freshworks.di.module.DBModule_ProvidesUserDaoFactory
 shoo/denonapps/com/freshworks/databinding/GiphyItemBindingImpl.java
  shoo.denonapps.com.freshworks.databinding.GiphyItemBindingImpl
 shoo/denonapps/com/freshworks/BuildConfig.java
@@ -16,54 +17,18 @@ shoo/denonapps/com/freshworks/databinding/GiphyItemBinding.java
  shoo.denonapps.com.freshworks.databinding.GiphyItemBinding
 androidx/databinding/library/baseAdapters/BR.java
  androidx.databinding.library.baseAdapters.BR
-shoo/denonapps/com/freshworks/datasource/GiphyRemoteDataSource_Factory.java
- shoo.denonapps.com.freshworks.datasource.GiphyRemoteDataSource_Factory
-shoo/denonapps/com/freshworks/di/module/NetworkModule_ProvideRetrofitFactory.java
- shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideRetrofitFactory
-shoo/denonapps/com/freshworks/DataBinderMapperImpl.java
- shoo.denonapps.com.freshworks.DataBinderMapperImpl
- shoo.denonapps.com.freshworks.DataBinderMapperImpl$InnerBrLookup
- shoo.denonapps.com.freshworks.DataBinderMapperImpl$InnerLayoutIdLookup
-shoo/denonapps/com/freshworks/di/ViewModelProviderFactory_Factory.java
- shoo.denonapps.com.freshworks.di.ViewModelProviderFactory_Factory
-shoo/denonapps/com/freshworks/di/module/FragmentModule_ContributeLoadingFragment.java
- shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeLoadingFragment
- shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeLoadingFragment$LoadingFragmentSubcomponent
- shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeLoadingFragment$LoadingFragmentSubcomponent$Factory
-shoo/denonapps/com/freshworks/databinding/ActivityMainBinding.java
- shoo.denonapps.com.freshworks.databinding.ActivityMainBinding
-shoo/denonapps/com/freshworks/databinding/ActivityMainBindingImpl.java
- shoo.denonapps.com.freshworks.databinding.ActivityMainBindingImpl
-shoo/denonapps/com/freshworks/di/module/NetworkModule_ProvideGsonFactory.java
- shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideGsonFactory
-shoo/denonapps/com/freshworks/ui/base/LoadingFragment_Factory.java
- shoo.denonapps.com.freshworks.ui.base.LoadingFragment_Factory
 androidx/databinding/DataBindingComponent.java
  androidx.databinding.DataBindingComponent
-shoo/denonapps/com/freshworks/DataBindingTriggerClass.java
- shoo.denonapps.com.freshworks.DataBindingTriggerClass
-shoo/denonapps/com/freshworks/ui/base/LoadingFragment_MembersInjector.java
- shoo.denonapps.com.freshworks.ui.base.LoadingFragment_MembersInjector
-shoo/denonapps/com/freshworks/databinding/FragmentHomeBinding.java
- shoo.denonapps.com.freshworks.databinding.FragmentHomeBinding
-shoo/denonapps/com/freshworks/di/module/ActivityModule_ContributeBaseActivity.java
- shoo.denonapps.com.freshworks.di.module.ActivityModule_ContributeBaseActivity
- shoo.denonapps.com.freshworks.di.module.ActivityModule_ContributeBaseActivity$MainActivitySubcomponent
- shoo.denonapps.com.freshworks.di.module.ActivityModule_ContributeBaseActivity$MainActivitySubcomponent$Factory
-shoo/denonapps/com/freshworks/databinding/FragmentFavBinding.java
- shoo.denonapps.com.freshworks.databinding.FragmentFavBinding
-shoo/denonapps/com/freshworks/di/module/DBModule_ProvidesUserDaoFactory.java
- shoo.denonapps.com.freshworks.di.module.DBModule_ProvidesUserDaoFactory
-shoo/denonapps/com/freshworks/ui/home/HomeViewModel_Factory.java
- shoo.denonapps.com.freshworks.ui.home.HomeViewModel_Factory
-shoo/denonapps/com/freshworks/di/module/DBModule_ProvidesAppDatabaseFactory.java
- shoo.denonapps.com.freshworks.di.module.DBModule_ProvidesAppDatabaseFactory
-shoo/denonapps/com/freshworks/di/module/FragmentModule_ContributeDashboardFragment.java
- shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeDashboardFragment
- shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeDashboardFragment$FavouriteFragmentSubcomponent
- shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeDashboardFragment$FavouriteFragmentSubcomponent$Factory
-shoo/denonapps/com/freshworks/ui/home/HomeFragment_MembersInjector.java
- shoo.denonapps.com.freshworks.ui.home.HomeFragment_MembersInjector
+shoo/denonapps/com/freshworks/di/module/DBModule_ProvideUserDataSourceFactory.java
+ shoo.denonapps.com.freshworks.di.module.DBModule_ProvideUserDataSourceFactory
+shoo/denonapps/com/freshworks/di/ViewModelProviderFactory_Factory.java
+ shoo.denonapps.com.freshworks.di.ViewModelProviderFactory_Factory
+shoo/denonapps/com/freshworks/databinding/FragmentFavBindingImpl.java
+ shoo.denonapps.com.freshworks.databinding.FragmentFavBindingImpl
+shoo/denonapps/com/freshworks/databinding/ActivityMainBinding.java
+ shoo.denonapps.com.freshworks.databinding.ActivityMainBinding
+shoo/denonapps/com/freshworks/datasource/GiphyFavDataSource_Factory.java
+ shoo.denonapps.com.freshworks.datasource.GiphyFavDataSource_Factory
 shoo/denonapps/com/freshworks/repository/GiphyDao_Impl.java
  shoo.denonapps.com.freshworks.repository.GiphyDao_Impl
  shoo.denonapps.com.freshworks.repository.GiphyDao_Impl$1
@@ -71,6 +36,50 @@ shoo/denonapps/com/freshworks/repository/GiphyDao_Impl.java
  shoo.denonapps.com.freshworks.repository.GiphyDao_Impl$3
  shoo.denonapps.com.freshworks.repository.GiphyDao_Impl$4
  shoo.denonapps.com.freshworks.repository.GiphyDao_Impl$5
+shoo/denonapps/com/freshworks/di/module/FragmentModule_ContributeDashboardFragment.java
+ shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeDashboardFragment
+ shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeDashboardFragment$FavouriteFragmentSubcomponent
+ shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeDashboardFragment$FavouriteFragmentSubcomponent$Factory
+shoo/denonapps/com/freshworks/BR.java
+ shoo.denonapps.com.freshworks.BR
+shoo/denonapps/com/freshworks/DataBindingTriggerClass.java
+ shoo.denonapps.com.freshworks.DataBindingTriggerClass
+shoo/denonapps/com/freshworks/ui/favourite/FavouriteViewModel_Factory.java
+ shoo.denonapps.com.freshworks.ui.favourite.FavouriteViewModel_Factory
+shoo/denonapps/com/freshworks/ui/favourite/FavouriteFragment_MembersInjector.java
+ shoo.denonapps.com.freshworks.ui.favourite.FavouriteFragment_MembersInjector
+shoo/denonapps/com/freshworks/databinding/ActivityMainBindingImpl.java
+ shoo.denonapps.com.freshworks.databinding.ActivityMainBindingImpl
+shoo/denonapps/com/freshworks/databinding/FragmentFavBinding.java
+ shoo.denonapps.com.freshworks.databinding.FragmentFavBinding
+shoo/denonapps/com/freshworks/DataBinderMapperImpl.java
+ shoo.denonapps.com.freshworks.DataBinderMapperImpl
+ shoo.denonapps.com.freshworks.DataBinderMapperImpl$InnerBrLookup
+ shoo.denonapps.com.freshworks.DataBinderMapperImpl$InnerLayoutIdLookup
+shoo/denonapps/com/freshworks/di/module/DBModule_ProvidesAppDatabaseFactory.java
+ shoo.denonapps.com.freshworks.di.module.DBModule_ProvidesAppDatabaseFactory
+shoo/denonapps/com/freshworks/databinding/FragmentHomeBinding.java
+ shoo.denonapps.com.freshworks.databinding.FragmentHomeBinding
+shoo/denonapps/com/freshworks/ui/loading/LoadingFragment_MembersInjector.java
+ shoo.denonapps.com.freshworks.ui.loading.LoadingFragment_MembersInjector
+shoo/denonapps/com/freshworks/di/module/ActivityModule_ContributeBaseActivity.java
+ shoo.denonapps.com.freshworks.di.module.ActivityModule_ContributeBaseActivity
+ shoo.denonapps.com.freshworks.di.module.ActivityModule_ContributeBaseActivity$MainActivitySubcomponent
+ shoo.denonapps.com.freshworks.di.module.ActivityModule_ContributeBaseActivity$MainActivitySubcomponent$Factory
+shoo/denonapps/com/freshworks/di/module/NetworkModule_ProvideGiphyRetrofitServiceFactory.java
+ shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideGiphyRetrofitServiceFactory
+shoo/denonapps/com/freshworks/ui/home/HomeViewModel_Factory.java
+ shoo.denonapps.com.freshworks.ui.home.HomeViewModel_Factory
+shoo/denonapps/com/freshworks/di/module/NetworkModule_ProvideRetrofitFactory.java
+ shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideRetrofitFactory
+shoo/denonapps/com/freshworks/di/module/FragmentModule_ContributeLoadingFragment.java
+ shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeLoadingFragment
+ shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeLoadingFragment$LoadingFragmentSubcomponent
+ shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeLoadingFragment$LoadingFragmentSubcomponent$Factory
+shoo/denonapps/com/freshworks/ui/home/HomeFragment_MembersInjector.java
+ shoo.denonapps.com.freshworks.ui.home.HomeFragment_MembersInjector
+shoo/denonapps/com/freshworks/di/module/NetworkModule_ProvideGsonFactory.java
+ shoo.denonapps.com.freshworks.di.module.NetworkModule_ProvideGsonFactory
 shoo/denonapps/com/freshworks/di/module/FragmentModule_ContributeHomeFragment.java
  shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeHomeFragment
  shoo.denonapps.com.freshworks.di.module.FragmentModule_ContributeHomeFragment$HomeFragmentSubcomponent
@@ -90,18 +99,9 @@ shoo/denonapps/com/freshworks/di/DaggerAppComponent.java
  shoo.denonapps.com.freshworks.di.DaggerAppComponent$LoadingFragmentSubcomponentImpl
  shoo.denonapps.com.freshworks.di.DaggerAppComponent$MainActivitySubcomponentFactory
  shoo.denonapps.com.freshworks.di.DaggerAppComponent$MainActivitySubcomponentImpl
-shoo/denonapps/com/freshworks/database/AppDatabase_Impl.java
- shoo.denonapps.com.freshworks.database.AppDatabase_Impl
- shoo.denonapps.com.freshworks.database.AppDatabase_Impl$1
 shoo/denonapps/com/freshworks/databinding/FragmentHomeBindingImpl.java
  shoo.denonapps.com.freshworks.databinding.FragmentHomeBindingImpl
-shoo/denonapps/com/freshworks/di/module/DBModule_ProvideUserDataSourceFactory.java
- shoo.denonapps.com.freshworks.di.module.DBModule_ProvideUserDataSourceFactory
-shoo/denonapps/com/freshworks/ui/favourite/FavouriteViewModel_Factory.java
- shoo.denonapps.com.freshworks.ui.favourite.FavouriteViewModel_Factory
-shoo/denonapps/com/freshworks/databinding/FragmentFavBindingImpl.java
- shoo.denonapps.com.freshworks.databinding.FragmentFavBindingImpl
-shoo/denonapps/com/freshworks/datasource/GiphyFavDataSource_Factory.java
- shoo.denonapps.com.freshworks.datasource.GiphyFavDataSource_Factory
-shoo/denonapps/com/freshworks/ui/favourite/FavouriteFragment_MembersInjector.java
- shoo.denonapps.com.freshworks.ui.favourite.FavouriteFragment_MembersInjector
+shoo/denonapps/com/freshworks/ui/loading/LoadingFragment_Factory.java
+ shoo.denonapps.com.freshworks.ui.loading.LoadingFragment_Factory
+shoo/denonapps/com/freshworks/datasource/GiphyRemoteDataSource_Factory.java
+ shoo.denonapps.com.freshworks.datasource.GiphyRemoteDataSource_Factory

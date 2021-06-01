@@ -11,7 +11,6 @@ import shoo.denonapps.com.freshworks.service.GiphyService
 @Module
 class NetworkModule {
 
-
     @Provides
     fun provideGson(): Gson {
         return GsonBuilder().create()

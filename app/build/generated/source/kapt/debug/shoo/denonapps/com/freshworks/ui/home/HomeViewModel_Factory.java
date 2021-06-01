@@ -13,28 +13,28 @@ import shoo.denonapps.com.freshworks.repository.GiphyRepository;
     "rawtypes"
 })
 public final class HomeViewModel_Factory implements Factory<HomeViewModel> {
-  private final Provider<GiphyRepository> loginRepositoryProvider;
+  private final Provider<GiphyRepository> giphyRepositoryProvider;
 
   private final Provider<GiphyFavDataSource> giphyFavDataSourceProvider;
 
-  public HomeViewModel_Factory(Provider<GiphyRepository> loginRepositoryProvider,
+  public HomeViewModel_Factory(Provider<GiphyRepository> giphyRepositoryProvider,
       Provider<GiphyFavDataSource> giphyFavDataSourceProvider) {
-    this.loginRepositoryProvider = loginRepositoryProvider;
+    this.giphyRepositoryProvider = giphyRepositoryProvider;
     this.giphyFavDataSourceProvider = giphyFavDataSourceProvider;
   }
 
   @Override
   public HomeViewModel get() {
-    return newInstance(loginRepositoryProvider.get(), giphyFavDataSourceProvider.get());
+    return newInstance(giphyRepositoryProvider.get(), giphyFavDataSourceProvider.get());
   }
 
-  public static HomeViewModel_Factory create(Provider<GiphyRepository> loginRepositoryProvider,
+  public static HomeViewModel_Factory create(Provider<GiphyRepository> giphyRepositoryProvider,
       Provider<GiphyFavDataSource> giphyFavDataSourceProvider) {
-    return new HomeViewModel_Factory(loginRepositoryProvider, giphyFavDataSourceProvider);
+    return new HomeViewModel_Factory(giphyRepositoryProvider, giphyFavDataSourceProvider);
   }
 
-  public static HomeViewModel newInstance(GiphyRepository loginRepository,
+  public static HomeViewModel newInstance(GiphyRepository giphyRepository,
       GiphyFavDataSource giphyFavDataSource) {
-    return new HomeViewModel(loginRepository, giphyFavDataSource);
+    return new HomeViewModel(giphyRepository, giphyFavDataSource);
   }
 }

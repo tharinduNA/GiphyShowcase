@@ -2,7 +2,7 @@ package shoo.denonapps.com.freshworks.repository
 
 import kotlinx.coroutines.flow.Flow
 import shoo.denonapps.com.freshworks.model.GiphyObject
-import shoo.denonapps.com.freshworks.service.Result
+import shoo.denonapps.com.freshworks.utils.Result
 
 interface GiphyRepository {
     fun trendingGiphys(): Flow<Result<ArrayList<GiphyObject>?>>
