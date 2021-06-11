@@ -85,4 +85,6 @@ class HomeViewModel @Inject constructor(
         return originalList
     }
 
+    fun fetchFavFromLocalDb() = giphyFavDataSource.findAll()
+
 }

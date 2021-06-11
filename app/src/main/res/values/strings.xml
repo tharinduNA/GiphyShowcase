@@ -5,4 +5,5 @@
     <string name="search_hint">Search</string>
     <string name="no_results">No Results!!</string>
     <string name="no_favs">No Favourites!!</string>
+    <string name="oops_something_went_wrong">Something went wrong</string>
 </resources>

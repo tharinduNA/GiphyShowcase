@@ -2,17 +2,17 @@ package shoo.denonapps.com.freshworks.ui.home
 
 import android.app.Dialog
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
+import shoo.denonapps.com.freshworks.R
 import shoo.denonapps.com.freshworks.databinding.FragmentHomeBinding
-import shoo.denonapps.com.freshworks.datasource.GiphyFavDataSource
 import shoo.denonapps.com.freshworks.model.GiphyObject
 import shoo.denonapps.com.freshworks.ui.loading.LoadingFragment
 import javax.inject.Inject
@@ -22,9 +22,6 @@ class HomeFragment : DaggerFragment() {
     @Inject
     lateinit var viewModelProvider: ViewModelProvider.Factory
     private val viewModel by viewModels<HomeViewModel> { viewModelProvider }
-
-    @Inject
-    lateinit var giphyFavDataSource: GiphyFavDataSource
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var giphyAdapter: GiphyAdapter
@@ -48,7 +45,7 @@ class HomeFragment : DaggerFragment() {
             lifecycleOwner = this@HomeFragment
         }
 
-        binding.searchText.addTextChangedListener(textWatcher)
+        binding.searchText.setOnQueryTextListener(queryTextListener)
 
         viewModel.fetchTrendingList()
 
@@ -64,6 +61,14 @@ class HomeFragment : DaggerFragment() {
 
     private fun subscribeToEvents() {
 
+        viewModel.fetchFavFromLocalDb().observe(viewLifecycleOwner, { it ->
+            if (it != null && it.isNotEmpty()) {
+                favList = it.map { item -> item?.id ?: "" }
+                if(this::giphyAdapter.isInitialized) giphyAdapter.cleanFavourites(favList)
+            } else if(this::giphyAdapter.isInitialized) giphyAdapter.cleanFavourites(listOf())
+
+        })
+
         viewModel.gifList.observe(viewLifecycleOwner, {
             binding.noResults.isVisible = it.size == 0
             val list = viewModel.arrangeList(favList, it)
@@ -76,24 +81,27 @@ class HomeFragment : DaggerFragment() {
             else loadingScreen.dismiss()
         })
 
-        giphyFavDataSource.findAll().observe(viewLifecycleOwner, { it ->
-            if (it != null && it.isNotEmpty()) {
-                favList = it.map { item -> item?.id ?: "" }
-            }
+        viewModel.error.observe(viewLifecycleOwner, {
+            Toast.makeText(
+                requireContext(),
+                R.string.oops_something_went_wrong,
+                Toast.LENGTH_LONG
+            )
         })
 
     }
 
-    private val textWatcher = object : TextWatcher {
-        override fun afterTextChanged(s: Editable?) {
+    private val queryTextListener = object : SearchView.OnQueryTextListener {
+        override fun onQueryTextSubmit(query: String?): Boolean {
+            if (query?.length == 0) viewModel.fetchTrendingList()
+            else viewModel.fetchSearchList(query.toString())
+            binding.searchText.clearFocus()
+            return false
         }
 
-        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-        }
-
-        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            if (s?.length == 0) viewModel.fetchTrendingList()
-            else viewModel.fetchSearchList(s.toString())
+        override fun onQueryTextChange(newText: String): Boolean {
+            if(newText.isEmpty()) viewModel.fetchTrendingList()
+            return true
         }
     }
 

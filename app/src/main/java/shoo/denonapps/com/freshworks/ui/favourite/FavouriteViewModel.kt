@@ -15,4 +15,6 @@ class FavouriteViewModel @Inject constructor(private val giphyFavDataSource: Gip
         }
     }
 
+    fun fetchFavFromLocalDb() = giphyFavDataSource.findAll()
+
 }

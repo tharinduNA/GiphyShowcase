@@ -2,6 +2,7 @@ package shoo.denonapps.com.freshworks.datasource
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.withContext
@@ -24,6 +25,8 @@ class GiphyRemoteDataSource @Inject constructor(
                 withContext(Dispatchers.Main) {
                     giphyService.getTrendingPosts(apiKey)
                 })
+        }.catch {
+            Result.Error(Exception("Something went wrong"))
         }.map { result ->
             if (result.isSuccessful) Result.Success(result.body()?.data)
             else Result.Error(Exception("Something went wrong"))
@@ -35,6 +38,8 @@ class GiphyRemoteDataSource @Inject constructor(
                 withContext(Dispatchers.Main) {
                     giphyService.getSearchResults(apiKey, 20, search)
                 })
+        }.catch {
+            Result.Error(Exception("Something went wrong"))
         }.map { result ->
             if (result.isSuccessful) Result.Success(result.body()?.data)
             else Result.Error(Exception("Something went wrong"))

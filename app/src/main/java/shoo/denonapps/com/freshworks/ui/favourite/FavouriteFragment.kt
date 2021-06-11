@@ -1,5 +1,6 @@
 package shoo.denonapps.com.freshworks.ui.favourite
 
+import android.app.Dialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +10,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import dagger.android.support.DaggerFragment
 import shoo.denonapps.com.freshworks.databinding.FragmentFavBinding
-import shoo.denonapps.com.freshworks.datasource.GiphyFavDataSource
 import shoo.denonapps.com.freshworks.model.GiphyObject
 import shoo.denonapps.com.freshworks.ui.home.EntryPoint
 import shoo.denonapps.com.freshworks.ui.home.GiphyAdapter
+import shoo.denonapps.com.freshworks.ui.loading.LoadingFragment
 import javax.inject.Inject
 
 class FavouriteFragment : DaggerFragment() {
@@ -21,14 +22,12 @@ class FavouriteFragment : DaggerFragment() {
     lateinit var viewModelProvider: ViewModelProvider.Factory
     private val viewModel by viewModels<FavouriteViewModel> {viewModelProvider}
 
-    @Inject
-    lateinit var giphyFavDataSource: GiphyFavDataSource
-
     private lateinit var binding: FragmentFavBinding
 
     private lateinit var giphyAdapter: GiphyAdapter
 
     private lateinit var itemOnClick: (GiphyObject) -> Unit
+    private lateinit var loadingScreen: Dialog
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -41,8 +40,10 @@ class FavouriteFragment : DaggerFragment() {
             viewModel= this@FavouriteFragment.viewModel
             lifecycleOwner = this@FavouriteFragment
         }
+        loadingScreen = LoadingFragment.progressDialog(requireContext())
 
         itemOnClick = { giphyObj ->
+            loadingScreen.show()
             giphyAdapter.updateList(giphyObj, EntryPoint.FAVOURITE)
             viewModel.removeFav(giphyObj)
         }
@@ -53,7 +54,7 @@ class FavouriteFragment : DaggerFragment() {
 
     private fun subscribeForEvents() {
 
-        giphyFavDataSource.findAll().observe(viewLifecycleOwner, {
+        viewModel.fetchFavFromLocalDb().observe(viewLifecycleOwner, {
             if (it != null && it.isNotEmpty()) {
                 binding.noResults.isVisible = it.isEmpty()
                 val giphyList = arrayListOf<GiphyObject>()
@@ -61,17 +62,20 @@ class FavouriteFragment : DaggerFragment() {
                     val trendingList = GiphyObject(giphy?.id ?: "", "", true)
                     giphyList.add(trendingList)
                 }
-
                 giphyAdapter = GiphyAdapter(giphyList, itemOnClick)
                 binding.trendingList.adapter = giphyAdapter
 
-            } else binding.noResults.isVisible = true
+            } else {
+                if (this::giphyAdapter.isInitialized) giphyAdapter.removeList()
+                binding.noResults.isVisible = true
+            }
+            loadingScreen.dismiss()
         })
 
     }
 
     fun updateUi(){
-        if (this::giphyAdapter.isInitialized ) subscribeForEvents()
+        if (this::viewModelProvider.isInitialized) subscribeForEvents()
     }
 
 }

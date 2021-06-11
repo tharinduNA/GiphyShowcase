@@ -36,6 +36,23 @@ class GiphyAdapter(
         notifyDataSetChanged()
     }
 
+    fun cleanFavourites(favList: List<String>) {
+        if (favList.isNotEmpty()) {
+            giphyList.filter { it.isFav }
+                .forEach {
+                    if (favList.contains(it.id).not()) {
+                        it.isFav = false
+                    }
+                }
+        } else giphyList.filter { it.isFav }.map { it.isFav = false }
+        notifyDataSetChanged()
+    }
+
+    fun removeList() {
+        giphyList.clear()
+        notifyDataSetChanged()
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): GiphyViewHolder {
         binding = DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),

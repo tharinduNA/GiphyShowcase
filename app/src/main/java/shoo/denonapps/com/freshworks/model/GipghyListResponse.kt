@@ -9,5 +9,5 @@ data class GipghyListResponse(
 data class GiphyObject(
     val id: String,
     val title: String,
-    val isFav: Boolean = false
+    var isFav: Boolean = false
 )
